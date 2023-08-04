@@ -1,12 +1,12 @@
 const theChoises = ["rock", "paper", "scissors"];
 const number = prompt("The maximum score");
-var pcPoint = 0;
-var myPoint = 0;
+let pcPoint = 0;
+let myPoint = 0;
 
 function game() {
-    var indiss = Math.floor(Math.random() * theChoises.length);
-    var choice = theChoises[indiss];
-    var myChoice = prompt("Please enter ur choice");
+    let indiss = Math.floor(Math.random() * theChoises.length);
+    let choice = theChoises[indiss];
+    let myChoice = prompt("Please enter ur choice");
     myChoice=myChoice.toLowerCase()
     if (myChoice == "rock") {
         console.log("******************");
