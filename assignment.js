@@ -1,5 +1,5 @@
 const theChoises = ["rock", "paper", "scissors"];
-const number = prompt("The maximum score");
+let maxPoints = prompt("The maximum score");
 let pcPoint = 0;
 let myPoint = 0;
 
@@ -7,7 +7,7 @@ function game() {
     let indiss = Math.floor(Math.random() * theChoises.length);
     let choice = theChoises[indiss];
     let myChoice = prompt("Please enter ur choice");
-    myChoice=myChoice.toLowerCase()
+    myChoice = myChoice.toLowerCase()
     if (myChoice == "rock") {
         console.log("******************");
         console.log("Computer=" + choice);
@@ -16,18 +16,18 @@ function game() {
             console.log("Computer=" + pcPoint + "- Your score=" + myPoint);
         } else if (choice == "paper") {
 
-            pcPoint = pcPoint+1;
+            pcPoint = pcPoint + 1;
             console.log("Computer=" + pcPoint + "- Your score=" + myPoint);
         } else if (choice == "scissors") {
 
-            myPoint = myPoint+1;
+            myPoint = myPoint + 1;
             console.log("Computer=" + pcPoint + "- Your score=" + myPoint);
         }
     } else if (myChoice == "paper") {
         console.log("******************");
         console.log("Computer=" + choice);
         if (choice == "rock") {
-            myPoint = myPoint+1;
+            myPoint = myPoint + 1;
             console.log("Computer=" + pcPoint + "- Your score=" + myPoint);
 
         } else if (choice == "paper") {
@@ -35,12 +35,12 @@ function game() {
             console.log("Computer=" + pcPoint + "- Your score=" + myPoint);
 
         } else if (choice == "scissors") {
-            pcPoint = pcPoint+1;
+            pcPoint = pcPoint + 1;
             console.log("Computer=" + pcPoint + "- Your score=" + myPoint);
 
 
         }
-    } else if(myChoice=="scissors"){
+    } else if (myChoice == "scissors") {
         console.log("******************");
         console.log("Computer=" + choice);
         if (choice == "scissors") {
@@ -48,25 +48,25 @@ function game() {
             console.log("Computer=" + pcPoint + "- Your score=" + myPoint);
 
         } else if (choice == "paper") {
-            myPoint = myPoint+1;
+            myPoint = myPoint + 1;
             console.log("Computer=" + pcPoint + "- Your score=" + myPoint);
 
         } else if (choice == "rock") {
 
-            pcPoint = pcPoint+1;
+            pcPoint = pcPoint + 1;
             console.log("Computer=" + pcPoint + "- Your score=" + myPoint);
 
         }
     }
 }
 
-while (true) {
+while (maxPoints) {
     game();
-    if (pcPoint == number) {
+    if (pcPoint == maxPoints) {
         prompt("Game is over and u lost");
         break;
     }
-    if (myPoint == number) {
+    if (myPoint == maxPoints) {
         prompt("Game is over and u won");
         break;
     }
